@@ -1,11 +1,18 @@
 # Архив результатов испытания
+RESTful API
 
-## Испытания
-1. Получение испытания (#)
-2. Создание испытания (#)
-3. Изменение испытания (#)
-4. Удаление испытания (#)
+## 1. Испытания
+  1. [Получение испытания] (#get-experimentid)
+  2. [Создание испытания] (#post-createexperiment)
+  3. [Изменение испытания] (#put-experimentid)
+  4. [Удаление испытания] (#delete-experiment)
 
 # 1. Испытания
 
-## GET /experiments/{id}
+## 1.1. GET /experiment/{id}
+
+## 1.2. POST /createexperiment/
+
+## 1.3. PUT /experiment/{id}
+
+## 1.4. DELETE /experiment/{id}
