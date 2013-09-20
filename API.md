@@ -2,11 +2,11 @@
 RESTful API
 
 ## 1. Испытания
-  1. [Получение испытания] (#get-experimentid)
-  2. [Поиск испытания] (#get-experimentparams)
-  3. [Создание испытания] (#post-createexperiment)
-  4. [Изменение испытания] (#put-experimentid)
-  5. [Удаление испытания] (#delete-experiment)
+  1. [Получение испытания] (#11-get-experimentid)
+  2. [Поиск испытания] (#12-get-experimentparams)
+  3. [Создание испытания] (#13-post-createexperiment)
+  4. [Изменение испытания] (#14-put-experimentid)
+  5. [Удаление испытания] (#15-delete-experiment)
 
 # 1. Испытания
 
