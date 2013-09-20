@@ -9,7 +9,7 @@ RESTful API
   4. [Изменение испытания] (#14-put-experimentid)
   5. [Удаление испытания] (#15-delete-experimentid)
 
-# 1. Испытания
+## 1. Испытания
 
 ### 1.1. GET /experiment/{id}
 
