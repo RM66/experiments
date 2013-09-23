@@ -478,7 +478,7 @@ HTTP/1.1 200 OK
 
 **Request**
 ```http
-GET /experiment/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+GET /experiment/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
 ```
 **Response**
 ```http
@@ -502,6 +502,7 @@ HTTP/1.1 200 OK
   "tasks": [
     {
       "name": "Название задачи1",
+      "type": 0,
       "dept": "Отдел/Цех",
       "planstart": "2013-23-09 18:46",
       "planend": "2013-23-09 18:47",
@@ -511,6 +512,7 @@ HTTP/1.1 200 OK
     },
     {
       "name": "Название задачи2",
+      "type": 1,
       "dept": "Отдел/Цех",
       "planstart": "2013-23-09 18:46",
       "planend": "2013-23-09 18:47",
@@ -645,11 +647,84 @@ HTTP/1.1 200 OK
 
 ### 4.1. Получение задачи `GET /task/:id`
 
+**Request**
+```http
+GET /task/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Название задачи",
+  "type": 0,
+  "dept": "Отдел/Цех",
+  "planstart": "2013-23-09 18:46",
+  "planend": "2013-23-09 18:47",
+  "docs": "Документация",
+  "notes": "Примечание",
+  "status": 0
+}
+```
+
 ### 4.2. Создание задачи `POST /task`
+
+**Request**
+```http
+POST /task HTTP/1.1
+
+{
+  "name": "Название задачи",
+  "type": 0,
+  "dept": "Отдел/Цех",
+  "planstart": "2013-23-09 18:46",
+  "planend": "2013-23-09 18:47",
+  "docs": "Документация",
+  "notes": "Примечание",
+  "status": 0
+}
+```
+**Response**
+```http
+HTTP/1.1 201 Created
+
+{
+    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+}
+```
 
 ### 4.3. Редактирование задачи `PUT /task/:id`
 
+**Request**
+```http
+PUT /task/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+
+{
+  "name": "Название задачи",
+  "type": 0,
+  "dept": "Отдел/Цех",
+  "planstart": "2013-23-09 18:46",
+  "planend": "2013-23-09 18:47",
+  "docs": "Документация",
+  "notes": "Примечание",
+  "status": 0
+}
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
+
 ### 4.4. Удаление задачи `DELETE /task/:id`
+
+**Request**
+```http
+DELETE /task/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
 
 
 ## 5. Места проведения
@@ -658,7 +733,7 @@ HTTP/1.1 200 OK
 
 **Request**
 ```http
-GET /location/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+GET /location/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
 ```
 **Response**
 ```http
