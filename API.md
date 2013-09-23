@@ -39,8 +39,56 @@
 ## 1. Темы
 
 ### 1.1. Получение темы `GET /theme/:id`
+**Request**
+```http
+GET /theme/6516c43c-b2e7-459d-a793-17b60b478445 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Название темы",
+  "status": 0,
+  "objects": [
+    {
+      "id": "ded2c20d-f02f-40d5-8133-46af19163993",
+      "name": "Название объекта1",
+      "status": 0,
+    },
+    {
+      "id": "9c8550f3-95a9-418e-a593-b9f5d5ab548d",
+      "name": "Название объекта2",
+      "status": 1
+    }
+  ]
+}
+```
 
 ### 1.2. Поиск темы `GET /theme/search/:params`
+**Request**
+```http
+GET /theme/search?q=название+темы&firstdate=01.01.2001&lastdate=12.12.2012
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "themes": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название темы1",
+      "status": 0
+    },
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название темы2",
+      "status": 1
+    }
+  ]
+}
+```
 
 ### 1.3. История изменения темы `GET /theme/history/:id`
 
