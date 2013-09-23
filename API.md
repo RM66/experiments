@@ -3,14 +3,14 @@
 
 ## RESTful API
 
-1. [Темы] (#)
-  1. [Получение темы] (#) `GET /theme/{id}`
-  2. [Поиск темы] (#) `GET /theme/search/{params}`
-  3. [История изменения темы] (#) `GET /theme/history/{id}`
-  4. [История изменения объекта темы] (#) `GET /theme/objecthistory/{id}`
-  5. [Создание темы] (#) `POST /theme`
-  6. [Редактирование темы] (#) `PUT /theme/{id}`
-  7. [Удаление темы] (#) `DELETE /theme/{id}`
+1. [Темы] (#1-Темы)
+  1. [Получение темы] (#11-Получение-темы-get-themeid) `GET /theme/{id}`
+  2. [Поиск темы] (#12-Поиск-темы-get-themesearchparams) `GET /theme/search/{params}`
+  3. [История изменения темы] (#13-История-изменения-темы-get-themehistoryid) `GET /theme/history/{id}`
+  4. [История изменения объекта темы] (#14-История-изменения-объекта-темы-get-themeobjecthistoryparams) `GET /theme/objecthistory/{params}`
+  5. [Создание темы] (#15-Создание-темы-post-theme) `POST /theme`
+  6. [Редактирование темы] (#16-Редактирование-темы-put-themeid) `PUT /theme/{id}`
+  7. [Удаление темы] (#17-Удаление-темы-delete-themeid) `DELETE /theme/{id}`
 2. [Объекты] (#)
   1. [Получение объекта] (#) `GET /object/{id}`
   2. [Поиск объекта] (#) `GET /object/search/{params}`
@@ -44,7 +44,7 @@
 
 ### 1.3. История изменения темы `GET /theme/history/{id}`
 
-### 1.4. История изменения объекта темы `GET /theme/objecthistory/{id}`
+### 1.4. История изменения объекта темы `GET /theme/objecthistory/{params}`
 
 ### 1.5. Создание темы `POST /theme`
 
