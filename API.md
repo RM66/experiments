@@ -241,12 +241,10 @@ HTTP/1.1 200 OK
     {
       "id": "ded2c20d-f02f-40d5-8133-46af19163993",
       "name": "Название объекта1",
-      "status": 0,
     },
     {
       "id": "9c8550f3-95a9-418e-a593-b9f5d5ab548d",
       "name": "Название объекта2",
-      "status": 1
     }
   ]
 }
@@ -376,13 +374,11 @@ HTTP/1.1 200 OK
   "objects": [
     {
       "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название объекта1",
-      "status": 0
+      "name": "Название объекта1"
     },
     {
       "id": "73580df4-ef64-410b-a224-f4f18389aff7",
-      "name": "Название объекта2",
-      "status": 1
+      "name": "Название объекта2"
     }
   ]
 }
@@ -417,11 +413,63 @@ HTTP/1.1 201 Created
 
 ### 2.6. Редактирование объекта `PUT /object/:id`
 
+**Request**
+```http
+PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+
+{
+  "name": "Название объекта"
+}
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
+
 ### 2.7. Редактирование объекта в теме `PUT /object/:id/theme/:id`
+
+**Request**
+```http
+PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/0a68f229-6506-4bc4-96e4-9aa792403fde HTTP/1.1
+
+{
+  "status": 1,
+  "experiments": [
+    {
+      "id": "c0090788-7d44-4d85-9b44-aa5105e432de"
+    },
+    {
+      "id": "54d33321-0e56-4028-9ba1-349f3a173d17"
+    }
+  ]
+}
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
 
 ### 2.8. Удаление объекта `DELETE /object/:id`
 
+**Request**
+```http
+PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
+
 ### 2.9. Удаление объекта из темы `DELETE /object/:id/theme/:id`
+
+**Request**
+```http
+PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/286fe904-4ac7-4c82-a036-af13eac64d12 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
 
 
 ## 3. Испытания
