@@ -13,7 +13,7 @@
   7. [Удаление темы] (#17-Удаление-темы-delete-themeid) `DELETE /theme/{id}`
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectid) `GET /object/{id}`
-  2. [Поиск объекта] (#22-Поиск-объекта-get-objectsearchid) `GET /object/search/{params}`
+  2. [Поиск объекта] (#22-Поиск-объекта-get-objectsearchparams) `GET /object/search/{params}`
   3. [Создание объекта] (#23-Создание-объекта-post-object) `POST /object`
   4. [Редактирование объекта] (#24-Редактирование-объекта-put-objectid) `PUT /object/{id}`
   5. [Удаление объекта] (#25-Удаление-объекта-delete-objectid) `DELETE /object/{id}`
