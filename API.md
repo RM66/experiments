@@ -1,6 +1,7 @@
 # Архив результатов испытания
 RESTful API
 
+
 1. [Темы] (#)
   1. [Получение темы] (#)
   2. [Поиск темы] (#)
@@ -33,14 +34,32 @@ RESTful API
   4. [Редактирование места] (#)
   5. [Удаление места] (#)
 
-## 1. Испытания
 
-### 1.1. GET /experiment/{id}
+## 1. Темы
 
-### 1.2. GET /experiment/search?{params}
+### 1.1. GET /theme/{id}
 
-### 1.3. POST /experiment
+### 1.2. GET /theme/search/{params}
 
-### 1.4. PUT /experiment/{id}
+### 1.3. GET /theme/history/{id}
 
-### 1.5. DELETE /experiment/{id}
+### 1.4. GET /theme/objecthistory/{id}
+
+### 1.5. POST /theme/create
+
+### 1.6. PUT /theme/{id}
+
+### 1.7. DELETE /theme/{id}
+
+
+## 3. Испытания
+
+### 3.1. GET /experiment/{id}
+
+### 3.2. GET /experiment/search?{params}
+
+### 3.3. POST /experiment
+
+### 3.4. PUT /experiment/{id}
+
+### 3.5. DELETE /experiment/{id}
