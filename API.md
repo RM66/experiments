@@ -93,7 +93,7 @@ HTTP/1.1 200 OK
 ### 1.3. История изменения темы `GET /theme/:id/history`
 **Request**
 ```http
-GET /theme/history/ HTTP/1.1
+GET /theme/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history/ HTTP/1.1
 ```
 **Response**
 ```http
@@ -158,6 +158,66 @@ HTTP/1.1 200 OK
 ```
 
 ### 1.4. История изменения объекта темы `GET /theme/:id/objecthistory/:id`
+**Request**
+```http
+GET /theme/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/objecthistory/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "history": [
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2014-10-24 17:42",
+      "experiments": [
+        {
+          "id": "f774eea5-11f4-46c1-ad4c-05e0cdd3839e"
+          "name": "Новый эксперимент"
+        }
+      ]
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2013-09-23 16:41",
+      "status": 1
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2012-08-22 15:40",
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Новый объект"
+        }
+      ]
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2011-07-21 14:39",
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Удаленный объект",
+          "isdeleted": true
+        }
+      ]
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2010-06-20 13:38",
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Объект с новым статусом",
+          "status": 2
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### 1.5. Создание темы `POST /theme`
 
