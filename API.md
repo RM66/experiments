@@ -6,8 +6,8 @@
 1. [Темы] (#1-Темы)
   1. [Получение темы] (#11-Получение-темы-get-themeid) `GET /theme/:id`
   2. [Поиск темы] (#12-Поиск-темы-get-themesearchparams) `GET /theme/search/:params`
-  3. [История изменения темы] (#13-История-изменения-темы-get-themehistoryid) `GET /theme/history/:id`
-  4. [История изменения объекта темы] (#14-История-изменения-объекта-темы-get-themeobjecthistoryparams) `GET /theme/objecthistory/:params`
+  3. [История изменения темы] (#13-История-изменения-темы-get-themeidhistory) `GET /theme/:id/history`
+  4. [История изменения объекта темы] (#14-История-изменения-объекта-темы-get-themeidobjecthistoryid) `GET /theme/:id/objecthistory/:id`
   5. [Создание темы] (#15-Создание-темы-post-theme) `POST /theme`
   6. [Редактирование темы] (#16-Редактирование-темы-put-themeid) `PUT /theme/:id`
   7. [Удаление темы] (#17-Удаление-темы-delete-themeid) `DELETE /theme/:id`
@@ -68,7 +68,7 @@ HTTP/1.1 200 OK
 ### 1.2. Поиск темы `GET /theme/search/:params`
 **Request**
 ```http
-GET /theme/search?q=название+темы&firstdate=01.01.2001&lastdate=12.12.2012
+GET /theme/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
 ```
 **Response**
 ```http
@@ -90,9 +90,74 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.3. История изменения темы `GET /theme/history/:id`
+### 1.3. История изменения темы `GET /theme/:id/history`
+**Request**
+```http
+GET /theme/history/ HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
 
-### 1.4. История изменения объекта темы `GET /theme/objecthistory/:params`
+{
+  "history": [
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2014-10-24 17:42",
+      "theme": {
+        "name": "Новое название"
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2013-09-23 16:41",
+      "theme": {
+        "status": 1
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2012-08-22 15:40",
+      "theme": {
+        "objects": [
+          {
+            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+            "name": "Новый объект"
+          }
+        ]
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2011-07-21 14:39",
+      "theme": {
+        "objects": [
+          {
+            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+            "name": "Удаленный объект",
+            "isdeleted": true
+          }
+        ]
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2010-06-20 13:38",
+      "theme": {
+        "objects": [
+          {
+            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+            "name": "Объект с новым статусом",
+            "status": 2
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+### 1.4. История изменения объекта темы `GET /theme/:id/objecthistory/:id`
 
 ### 1.5. Создание темы `POST /theme`
 
