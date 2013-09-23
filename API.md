@@ -5,18 +5,19 @@
 
 1. [Темы] (#1-Темы)
   1. [Получение темы] (#11-Получение-темы-get-themeid) `GET /theme/:id`
-  2. [Поиск темы] (#12-Поиск-темы-get-themesearchparams) `GET /theme/search/:params`
-  3. [История изменения темы] (#13-История-изменения-темы-get-themeidhistory) `GET /theme/:id/history`
-  4. [История изменения объекта темы] (#14-История-изменения-объекта-темы-get-themeidobjecthistoryid) `GET /theme/:id/objecthistory/:id`
-  5. [Создание темы] (#15-Создание-темы-post-theme) `POST /theme`
-  6. [Редактирование темы] (#16-Редактирование-темы-put-themeid) `PUT /theme/:id`
-  7. [Удаление темы] (#17-Удаление-темы-delete-themeid) `DELETE /theme/:id`
+  2. [История изменения темы] (#12-История-изменения-темы-get-themeidhistory) `GET /theme/:id/history`
+  3. [Поиск темы] (#13-Поиск-темы-get-themesearchparams) `GET /theme/search/:params`
+  4. [Создание темы] (#14-Создание-темы-post-theme) `POST /theme`
+  5. [Редактирование темы] (#15-Редактирование-темы-put-themeid) `PUT /theme/:id`
+  6. [Удаление темы] (#16-Удаление-темы-delete-themeid) `DELETE /theme/:id`
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectid) `GET /object/:id`
-  2. [Поиск объекта] (#22-Поиск-объекта-get-objectsearchparams) `GET /object/search/:params`
-  3. [Создание объекта] (#23-Создание-объекта-post-object) `POST /object`
-  4. [Редактирование объекта] (#24-Редактирование-объекта-put-objectid) `PUT /object/:id`
-  5. [Удаление объекта] (#25-Удаление-объекта-delete-objectid) `DELETE /object/:id`
+  2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectidthemeid) `GET /object/:id/theme/:id`
+  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectidhistoryid) `GET /object/:id/history/:id`
+  4. [Поиск объекта] (#24-Поиск-объекта-get-objectsearchparams) `GET /object/search/:params`
+  5. [Создание объекта] (#25-Создание-объекта-post-object) `POST /object`
+  6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectid) `PUT /object/:id`
+  7. [Удаление объекта] (#27-Удаление-объекта-delete-objectid) `DELETE /object/:id`
 3. [Испытания] (#3-Испытания)
   1. [Получение испытания] (#31-Получение-испытания-get-experimentid) `GET /experiment/:id`
   2. [Поиск испытания] (#32-Поиск-испытания-get-experimentsearchparams) `GET /experiment/search/:params`
@@ -65,35 +66,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.2. Поиск темы `GET /theme/search/:params`
+### 1.2. История изменения темы `GET /theme/:id/history`
 **Request**
 ```http
-GET /theme/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "themes": [
-    {
-      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название темы1",
-      "status": 0
-    },
-    {
-      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название темы2",
-      "status": 1
-    }
-  ]
-}
-```
-
-### 1.3. История изменения темы `GET /theme/:id/history`
-**Request**
-```http
-GET /theme/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history/ HTTP/1.1
+GET /theme/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
 ```
 **Response**
 ```http
@@ -157,10 +133,64 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.4. История изменения объекта темы `GET /theme/:id/objecthistory/:id`
+### 1.3. Поиск темы `GET /theme/search/:params`
 **Request**
 ```http
-GET /theme/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/objecthistory/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
+GET /theme/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "themes": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название темы1",
+      "status": 0
+    },
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название темы2",
+      "status": 1
+    }
+  ]
+}
+```
+
+### 1.4. Создание темы `POST /theme`
+
+**Request**
+```http
+POST /theme HTTP/1.1
+
+{
+}
+```
+**Response**
+```http
+HTTP/1.1 201 Created
+
+{
+    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+}
+```
+
+### 1.5. Редактирование темы `PUT /theme/:id`
+
+### 1.6. Удаление темы `DELETE /theme/:id`
+
+
+## 2. Объекты
+
+### 2.1. Получение объекта `GET /object/:id`
+
+### 2.2. Получение объекта в контексте темы `GET /object/:id/theme/:id`
+
+### 2.3. История изменения объекта в теме `GET /object/:id/history/:id`
+**Request**
+```http
+GET /object/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
 ```
 **Response**
 ```http
@@ -219,24 +249,13 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.5. Создание темы `POST /theme`
+### 2.4. Поиск объекта `GET /object/search/:params`
 
-### 1.6. Редактирование темы `PUT /theme/:id`
+### 2.5. Создание объекта `POST /object`
 
-### 1.7. Удаление темы `DELETE /theme/:id`
+### 2.6. Редактирование объекта `PUT /object/:id`
 
-
-## 2. Объекты
-
-### 2.1. Получение объекта `GET /object/:id`
-
-### 2.2. Поиск объекта `GET /object/search/:params`
-
-### 2.3. Создание объекта `POST /object`
-
-### 2.4. Редактирование объекта `PUT /object/:id`
-
-### 2.5. Удаление объекта `DELETE /object/:id`
+### 2.7. Удаление объекта `DELETE /object/:id`
 
 
 ## 3. Испытания
