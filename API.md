@@ -453,7 +453,7 @@ HTTP/1.1 200 OK
 
 **Request**
 ```http
-PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+DELETE /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 ```
 **Response**
 ```http
@@ -464,7 +464,7 @@ HTTP/1.1 200 OK
 
 **Request**
 ```http
-PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/286fe904-4ac7-4c82-a036-af13eac64d12 HTTP/1.1
+DELETE /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/286fe904-4ac7-4c82-a036-af13eac64d12 HTTP/1.1
 ```
 **Response**
 ```http
@@ -476,13 +476,169 @@ HTTP/1.1 200 OK
 
 ### 3.1. Получение испытания `GET /experiment/:id`
 
+**Request**
+```http
+GET /experiment/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Название программы",
+  "location": 41025123-37fa-41d7-84af-645431f8ba84,
+  "dept": "Название отдела",
+  "objects": [
+    {
+      "id": "817139c0-dfdc-4928-a375-7cd5a18d1f3c",
+      "name": "Название объекта1"
+    },
+    {
+      "id": "cbec02ca-999a-4645-830e-8dee5dbb6054",
+      "name": "Название объекта2"    
+    }
+  ],
+  "reason": "Основание для испытания",
+  "tasks": [
+    {
+      "name": "Название задачи1",
+      "dept": "Отдел/Цех",
+      "planstart": "2013-23-09 18:46",
+      "planend": "2013-23-09 18:47",
+      "docs": "Документация",
+      "notes": "Примечание",
+      "status": 0
+    },
+    {
+      "name": "Название задачи2",
+      "dept": "Отдел/Цех",
+      "planstart": "2013-23-09 18:46",
+      "planend": "2013-23-09 18:47",
+      "docs": "Документация",
+      "notes": "Примечание",
+      "status": 4,
+      "equipment": "Комплектация",
+      "extconditions": "Внешние условия"
+    }
+  ],
+  "status": 0,
+  "report": "Акт/Отчет",
+  "conclusion": "Заключение"
+}
+```
+
 ### 3.2. Поиск испытания `GET /experiment/search/:params`
+
+**Request**
+```http
+GET /experiment/search?q=поисковый+запрос HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "experiments": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название испытания1",
+      "status": 0
+    },
+    {
+      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+      "name": "Название испытания2",
+      "status": 1
+    }
+  ]
+}
+```
 
 ### 3.3. Создание испытания `POST /experiment`
 
+**Request**
+```http
+POST /experiment HTTP/1.1
+
+{
+  "name": "Название программы",
+  "location": 41025123-37fa-41d7-84af-645431f8ba84,
+  "dept": "Название отдела",
+  "objects": [
+    {
+      "id": "817139c0-dfdc-4928-a375-7cd5a18d1f3c"
+    },
+    {
+      "id": "cbec02ca-999a-4645-830e-8dee5dbb6054"
+    }
+  ],
+  "reason": "Основание для испытания",
+  "tasks": [
+    {
+      "id": "874a3836-d801-479e-8566-28fc9ca428f0"
+    },
+    {
+      "id": "480f84c8-c378-4cf5-a4e3-5cc9c5ef15d4"
+    }
+  ],
+  "status": 0
+}
+```
+**Response**
+```http
+HTTP/1.1 201 Created
+
+{
+    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+}
+```
+
 ### 3.4. Редактирование испытания `PUT /experiment/:id`
 
+**Request**
+```http
+PUT /experiment/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+
+{
+  "name": "Название программы",
+  "location": 41025123-37fa-41d7-84af-645431f8ba84,
+  "dept": "Название отдела",
+  "objects": [
+    {
+      "id": "817139c0-dfdc-4928-a375-7cd5a18d1f3c"
+    },
+    {
+      "id": "cbec02ca-999a-4645-830e-8dee5dbb6054"
+    }
+  ],
+  "reason": "Основание для испытания",
+  "tasks": [
+    {
+      "id": "874a3836-d801-479e-8566-28fc9ca428f0"
+    },
+    {
+      "id": "480f84c8-c378-4cf5-a4e3-5cc9c5ef15d4"
+    }
+  ],
+  "status": 0,
+  "report": "Акт/Отчет",
+  "conclusion": "Заключение"
+}
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
+
 ### 3.5. Удаление испытания `DELETE /experiment/:id`
+
+**Request**
+```http
+DELETE /experiment/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
 
 
 ## 4. Задачи
@@ -500,10 +656,82 @@ HTTP/1.1 200 OK
 
 ### 5.1. Получение места `GET /location/:id`
 
+**Request**
+```http
+GET /location/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Название места"
+}
+```
+
 ### 5.2. Поиск места `GET /location/search/:params`
+
+**Request**
+```http
+GET /location/search?q=поисковый+запрос HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "locations": [
+    {
+      "name": "Название места1"
+    },
+    {
+      "name": "Название места2"
+    }
+  ]
+}
+```
 
 ### 5.3. Создание места `POST /location`
 
+**Request**
+```http
+POST /location HTTP/1.1
+
+{
+  "name": "Название места"
+}
+```
+**Response**
+```http
+HTTP/1.1 201 Created
+
+{
+    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+}
+```
+
 ### 5.4. Редактирование места `PUT /location/:id`
 
+**Request**
+```http
+PUT /location/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+
+{
+  "name": "Название места"
+}
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
+
 ### 5.5. Удаление места `DELETE /location/:id`
+
+**Request**
+```http
+DELETE /location/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+```
