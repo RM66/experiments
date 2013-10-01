@@ -17,9 +17,9 @@
   4. [Поиск объекта] (#24-Поиск-объекта-get-objectssearchparams) `GET /objects/search/:params`
   5. [Создание объекта] (#25-Создание-объекта-post-objects) `POST /objects`
   6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
-  7. [Редактирование объекта в теме] (#27-Редактирование-объекта-в-теме-put-objectsidthemeid) `PUT /objects/:id/themes/:id`
+  7. [Редактирование объекта в теме] (#27-Редактирование-объекта-в-теме-put-objectsidthemesid) `PUT /objects/:id/themes/:id`
   8. [Удаление объекта] (#28-Удаление-объекта-delete-objectsid) `DELETE /objects/:id`
-  9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectsidthemeid) `DELETE /objects/:id/themes/:id`
+  9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
 3. [Испытания] (#3-Испытания)
   1. [Получение испытания] (#31-Получение-испытания-get-experimentsid) `GET /experiments/:id`
   2. [Поиск испытания] (#32-Поиск-испытания-get-experimentssearchparams) `GET /experiments/search/:params`
