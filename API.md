@@ -4,47 +4,48 @@
 ## RESTful API
 
 1. [Темы] (#1-Темы)
-  1. [Получение темы] (#11-Получение-темы-get-themeid) `GET /theme/:id`
-  2. [История изменения темы] (#12-История-изменения-темы-get-themeidhistory) `GET /theme/:id/history`
-  3. [Поиск темы] (#13-Поиск-темы-get-themesearchparams) `GET /theme/search/:params`
-  4. [Создание темы] (#14-Создание-темы-post-theme) `POST /theme`
-  5. [Редактирование темы] (#15-Редактирование-темы-put-themeid) `PUT /theme/:id`
-  6. [Удаление темы] (#16-Удаление-темы-delete-themeid) `DELETE /theme/:id`
+  1. [Получение темы] (#11-Получение-темы-get-themesid) `GET /themes/:id`
+  2. [История изменения темы] (#12-История-изменения-темы-get-themesidhistory) `GET /themes/:id/history`
+  3. [Поиск темы] (#13-Поиск-темы-get-themessearchparams) `GET /themes/search/:params`
+  4. [Создание темы] (#14-Создание-темы-post-themes) `POST /themes`
+  5. [Редактирование темы] (#15-Редактирование-темы-put-themesid) `PUT /themes/:id`
+  6. [Удаление темы] (#16-Удаление-темы-delete-themesid) `DELETE /themes/:id`
 2. [Объекты] (#2-Объекты)
-  1. [Получение объекта] (#21-Получение-объекта-get-objectid) `GET /object/:id`
-  2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectidthemeid) `GET /object/:id/theme/:id`
-  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectidhistoryid) `GET /object/:id/history/:id`
-  4. [Поиск объекта] (#24-Поиск-объекта-get-objectsearchparams) `GET /object/search/:params`
-  5. [Создание объекта] (#25-Создание-объекта-post-object) `POST /object`
-  6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectid) `PUT /object/:id`
-  7. [Редактирование объекта в теме] (#27-Редактирование-объекта-в-теме-put-objectidthemeid) `PUT /object/:id/theme/:id`
-  8. [Удаление объекта] (#28-Удаление-объекта-delete-objectid) `DELETE /object/:id`
-  9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectidthemeid) `DELETE /object/:id/theme/:id`
+  1. [Получение объекта] (#21-Получение-объекта-get-objectsid) `GET /objects/:id`
+  2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemeid) `GET /objects/:id/themes/:id`
+  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectsidhistoryid) `GET /objects/:id/history/:id`
+  4. [Поиск объекта] (#24-Поиск-объекта-get-objectssearchparams) `GET /objects/search/:params`
+  5. [Создание объекта] (#25-Создание-объекта-post-objects) `POST /objects`
+  6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
+  7. [Редактирование объекта в теме] (#27-Редактирование-объекта-в-теме-put-objectsidthemeid) `PUT /objects/:id/themes/:id`
+  8. [Удаление объекта] (#28-Удаление-объекта-delete-objectsid) `DELETE /objects/:id`
+  9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectsidthemeid) `DELETE /objects/:id/themes/:id`
 3. [Испытания] (#3-Испытания)
-  1. [Получение испытания] (#31-Получение-испытания-get-experimentid) `GET /experiment/:id`
-  2. [Поиск испытания] (#32-Поиск-испытания-get-experimentsearchparams) `GET /experiment/search/:params`
-  3. [Создание испытания] (#33-Создание-испытания-post-experiment) `POST /experiment`
-  4. [Редактирование испытания] (#34-Редактирование-испытания-put-experimentid) `PUT /experiment/:id`
-  5. [Удаление испытания] (#35-Удаление-испытания-delete-experimentid) `DELETE /experiment/:id`
+  1. [Получение испытания] (#31-Получение-испытания-get-experimentsid) `GET /experiments/:id`
+  2. [Поиск испытания] (#32-Поиск-испытания-get-experimentssearchparams) `GET /experiments/search/:params`
+  3. [Создание испытания] (#33-Создание-испытания-post-experiments) `POST /experiments`
+  4. [Редактирование испытания] (#34-Редактирование-испытания-put-experimentsid) `PUT /experiments/:id`
+  5. [Удаление испытания] (#35-Удаление-испытания-delete-experimentsid) `DELETE /experiments/:id`
 4. [Задачи] (#4-Задачи)
-  1. [Получение задачи] (#41-Получение-задачи-get-taskid) `GET /task/:id`
-  2. [Создание задачи] (#42-Создание-задачи-post-task) `POST /task`
-  3. [Редактирование задачи] (#43-Редактирование-задачи-put-taskid) `PUT /task/:id`
-  4. [Удаление задачи] (#44-Удаление-задачи-delete-taskid) `DELETE /task/:id`
+  1. [Получение задачи] (#41-Получение-задачи-get-tasksid) `GET /tasks/:id`
+  2. [Создание задачи] (#42-Создание-задачи-post-tasks) `POST /tasks`
+  3. [Редактирование задачи] (#43-Редактирование-задачи-put-tasksid) `PUT /tasks/:id`
+  4. [Удаление задачи] (#44-Удаление-задачи-delete-tasksid) `DELETE /tasks/:id`
 5. [Места проведения] (#5-Места-проведения)
-  1. [Получение места] (#51-Получение-места-get-locationid) `GET /location/:id`
-  2. [Поиск места] (#52-Поиск-места-get-locationsearchparams) `GET /location/search/:params`
-  3. [Создание места] (#53-Создание-места-post-location) `POST /location`
-  4. [Редактирование места] (#54-Редактирование-места-put-locationid) `PUT /location/:id`
-  5. [Удаление места] (#55-Удаление-места-delete-locationid) `DELETE /location/:id`
+  1. [Получение мест] (#51-Получение-места-get-locationsid) `GET /locations/`
+6. [Статусы] (#6-Статусы)
+  1. [Статусы темы] (#61-Статусы-темы-get-statusesthemes) `GET /statuses/themess`
+  2. [Статусы объекта] (#62-Статусы-объекта-get-statusesobjects) `GET /statuses/objectss`
+  3. [Статусы испытания] (#63-Статусы-испытания-get-statusesexperiments) `GET /statuses/experimentss`
+  4. [Статусы задачи] (#64-Статусы-задачи-get-statusestasks) `GET /statuses/taskss`
 
 
 ## 1. Темы
 
-### 1.1. Получение темы `GET /theme/:id`
+### 1.1. Получение темы `GET /themes/:id`
 **Request**
 ```http
-GET /theme/6516c43c-b2e7-459d-a793-17b60b478445 HTTP/1.1
+GET /themes/6516c43c-b2e7-459d-a793-17b60b478445 HTTP/1.1
 ```
 **Response**
 ```http
@@ -68,10 +69,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.2. История изменения темы `GET /theme/:id/history`
+### 1.2. История изменения темы `GET /themes/:id/history`
 **Request**
 ```http
-GET /theme/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+GET /themes/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
 ```
 **Response**
 ```http
@@ -135,10 +136,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.3. Поиск темы `GET /theme/search/:params`
+### 1.3. Поиск темы `GET /themes/search/:params`
 **Request**
 ```http
-GET /theme/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
+GET /themes/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
 ```
 **Response**
 ```http
@@ -160,11 +161,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.4. Создание темы `POST /theme`
+### 1.4. Создание темы `POST /themes`
 
 **Request**
 ```http
-POST /theme HTTP/1.1
+POST /themes HTTP/1.1
 
 {
   "name": "Название темы",
@@ -188,11 +189,11 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 1.5. Редактирование темы `PUT /theme/:id`
+### 1.5. Редактирование темы `PUT /themes/:id`
 
 **Request**
 ```http
-PUT /theme/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+PUT /themes/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
   "name": "Название темы",
@@ -212,11 +213,11 @@ PUT /theme/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 1.6. Удаление темы `DELETE /theme/:id`
+### 1.6. Удаление темы `DELETE /themes/:id`
 
 **Request**
 ```http
-PUT /theme/01c7c18c-2196-4284-b3a2-527f1df3d8c2 HTTP/1.1
+PUT /themes/01c7c18c-2196-4284-b3a2-527f1df3d8c2 HTTP/1.1
 ```
 **Response**
 ```http
@@ -226,10 +227,10 @@ HTTP/1.1 200 OK
 
 ## 2. Объекты
 
-### 2.1. Получение объекта `GET /object/:id`
+### 2.1. Получение объекта `GET /objects/:id`
 **Request**
 ```http
-GET /object/6516c43c-b2e7-459d-a793-17b60b478445 HTTP/1.1
+GET /objects/6516c43c-b2e7-459d-a793-17b60b478445 HTTP/1.1
 ```
 **Response**
 ```http
@@ -250,10 +251,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.2. Получение объекта в контексте темы `GET /object/:id/theme/:id`
+### 2.2. Получение объекта в контексте темы `GET /objects/:id/themes/:id`
 **Request**
 ```http
-GET /object/6516c43c-b2e7-459d-a793-17b60b478445/theme/7d113f55-97e2-4ebd-a2eb-8dd316801be6 HTTP/1.1
+GET /objects/6516c43c-b2e7-459d-a793-17b60b478445/themes/7d113f55-97e2-4ebd-a2eb-8dd316801be6 HTTP/1.1
 ```
 **Response**
 ```http
@@ -298,10 +299,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.3. История изменения объекта в теме `GET /object/:id/history/:id`
+### 2.3. История изменения объекта в теме `GET /objects/:id/history/:id`
 **Request**
 ```http
-GET /object/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
+GET /objects/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
 ```
 **Response**
 ```http
@@ -360,11 +361,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.4. Поиск объекта `GET /object/search/:params`
+### 2.4. Поиск объекта `GET /objects/search/:params`
 
 **Request**
 ```http
-GET /object/search?q=поисковый+запрос HTTP/1.1
+GET /objects/search?q=поисковый+запрос HTTP/1.1
 ```
 **Response**
 ```http
@@ -384,11 +385,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.5. Создание объекта `POST /object`
+### 2.5. Создание объекта `POST /objects`
 
 **Request**
 ```http
-POST /object HTTP/1.1
+POST /objects HTTP/1.1
 
 {
   "name": "Название объекта",
@@ -411,11 +412,11 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 2.6. Редактирование объекта `PUT /object/:id`
+### 2.6. Редактирование объекта `PUT /objects/:id`
 
 **Request**
 ```http
-PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
   "name": "Название объекта"
@@ -426,11 +427,11 @@ PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 2.7. Редактирование объекта в теме `PUT /object/:id/theme/:id`
+### 2.7. Редактирование объекта в теме `PUT /objects/:id/themes/:id`
 
 **Request**
 ```http
-PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/0a68f229-6506-4bc4-96e4-9aa792403fde HTTP/1.1
+PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8/themes/0a68f229-6506-4bc4-96e4-9aa792403fde HTTP/1.1
 
 {
   "status": 1,
@@ -449,22 +450,22 @@ PUT /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/0a68f229-6506-4bc4-96e4-9
 HTTP/1.1 200 OK
 ```
 
-### 2.8. Удаление объекта `DELETE /object/:id`
+### 2.8. Удаление объекта `DELETE /objects/:id`
 
 **Request**
 ```http
-DELETE /object/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+DELETE /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 ```
 **Response**
 ```http
 HTTP/1.1 200 OK
 ```
 
-### 2.9. Удаление объекта из темы `DELETE /object/:id/theme/:id`
+### 2.9. Удаление объекта из темы `DELETE /objects/:id/themes/:id`
 
 **Request**
 ```http
-DELETE /object/d4ccab6c-b004-4506-9793-f22a7728a1d8/theme/286fe904-4ac7-4c82-a036-af13eac64d12 HTTP/1.1
+DELETE /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8/themes/286fe904-4ac7-4c82-a036-af13eac64d12 HTTP/1.1
 ```
 **Response**
 ```http
@@ -474,11 +475,11 @@ HTTP/1.1 200 OK
 
 ## 3. Испытания
 
-### 3.1. Получение испытания `GET /experiment/:id`
+### 3.1. Получение испытания `GET /experiments/:id`
 
 **Request**
 ```http
-GET /experiment/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
+GET /experiments/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
 ```
 **Response**
 ```http
@@ -529,11 +530,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 3.2. Поиск испытания `GET /experiment/search/:params`
+### 3.2. Поиск испытания `GET /experiments/search/:params`
 
 **Request**
 ```http
-GET /experiment/search?q=поисковый+запрос HTTP/1.1
+GET /experiments/search?q=поисковый+запрос HTTP/1.1
 ```
 **Response**
 ```http
@@ -555,11 +556,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 3.3. Создание испытания `POST /experiment`
+### 3.3. Создание испытания `POST /experiments`
 
 **Request**
 ```http
-POST /experiment HTTP/1.1
+POST /experiments HTTP/1.1
 
 {
   "name": "Название программы",
@@ -594,11 +595,11 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 3.4. Редактирование испытания `PUT /experiment/:id`
+### 3.4. Редактирование испытания `PUT /experiments/:id`
 
 **Request**
 ```http
-PUT /experiment/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
   "name": "Название программы",
@@ -631,11 +632,11 @@ PUT /experiment/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 3.5. Удаление испытания `DELETE /experiment/:id`
+### 3.5. Удаление испытания `DELETE /experiments/:id`
 
 **Request**
 ```http
-DELETE /experiment/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+DELETE /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 ```
 **Response**
 ```http
@@ -645,11 +646,11 @@ HTTP/1.1 200 OK
 
 ## 4. Задачи
 
-### 4.1. Получение задачи `GET /task/:id`
+### 4.1. Получение задачи `GET /tasks/:id`
 
 **Request**
 ```http
-GET /task/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
+GET /tasks/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
 ```
 **Response**
 ```http
@@ -667,11 +668,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 4.2. Создание задачи `POST /task`
+### 4.2. Создание задачи `POST /tasks`
 
 **Request**
 ```http
-POST /task HTTP/1.1
+POST /tasks HTTP/1.1
 
 {
   "name": "Название задачи",
@@ -693,11 +694,11 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 4.3. Редактирование задачи `PUT /task/:id`
+### 4.3. Редактирование задачи `PUT /tasks/:id`
 
 **Request**
 ```http
-PUT /task/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+PUT /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
   "name": "Название задачи",
@@ -715,11 +716,11 @@ PUT /task/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 4.4. Удаление задачи `DELETE /task/:id`
+### 4.4. Удаление задачи `DELETE /tasks/:id`
 
 **Request**
 ```http
-DELETE /task/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+DELETE /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 ```
 **Response**
 ```http
@@ -729,11 +730,11 @@ HTTP/1.1 200 OK
 
 ## 5. Места проведения
 
-### 5.1. Получение места `GET /location/:id`
+### 5.1. Получение места `GET /locations/:id`
 
 **Request**
 ```http
-GET /location/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
+GET /locations/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
 ```
 **Response**
 ```http
@@ -744,11 +745,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 5.2. Поиск места `GET /location/search/:params`
+### 5.2. Поиск места `GET /locations/search/:params`
 
 **Request**
 ```http
-GET /location/search?q=поисковый+запрос HTTP/1.1
+GET /locations/search?q=поисковый+запрос HTTP/1.1
 ```
 **Response**
 ```http
@@ -766,11 +767,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 5.3. Создание места `POST /location`
+### 5.3. Создание места `POST /locations`
 
 **Request**
 ```http
-POST /location HTTP/1.1
+POST /locations HTTP/1.1
 
 {
   "name": "Название места"
@@ -785,11 +786,11 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 5.4. Редактирование места `PUT /location/:id`
+### 5.4. Редактирование места `PUT /locations/:id`
 
 **Request**
 ```http
-PUT /location/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+PUT /locations/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
   "name": "Название места"
@@ -800,13 +801,31 @@ PUT /location/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 5.5. Удаление места `DELETE /location/:id`
+### 5.5. Удаление места `DELETE /locations/:id`
 
 **Request**
 ```http
-DELETE /location/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
+DELETE /locations/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 ```
 **Response**
 ```http
 HTTP/1.1 200 OK
+```
+
+
+## 6. Статусы
+
+### 6.1. Поиск статуса `GET /statuses/search/:params`
+
+**Request**
+```http
+GET //search?q=поисковый+запрос HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Название места"
+}
 ```
