@@ -12,7 +12,7 @@
   6. [Удаление темы] (#16-Удаление-темы-delete-themesid) `DELETE /themes/:id`
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectsid) `GET /objects/:id`
-  2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemeid) `GET /objects/:id/themes/:id`
+  2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemesid) `GET /objects/:id/themes/:id`
   3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectsidhistoryid) `GET /objects/:id/history/:id`
   4. [Поиск объекта] (#24-Поиск-объекта-get-objectssearchparams) `GET /objects/search/:params`
   5. [Создание объекта] (#25-Создание-объекта-post-objects) `POST /objects`
