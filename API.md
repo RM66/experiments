@@ -32,12 +32,12 @@
   3. [Редактирование задачи] (#43-Редактирование-задачи-put-tasksid) `PUT /tasks/:id`
   4. [Удаление задачи] (#44-Удаление-задачи-delete-tasksid) `DELETE /tasks/:id`
 5. [Места проведения] (#5-Места-проведения)
-  1. [Получение мест] (#51-Получение-места-get-locationsid) `GET /locations/`
+  1. [Получение мест] (#51-Получение-мест-get-locations) `GET /locations`
 6. [Статусы] (#6-Статусы)
-  1. [Статусы темы] (#61-Статусы-темы-get-statusesthemes) `GET /statuses/themess`
-  2. [Статусы объекта] (#62-Статусы-объекта-get-statusesobjects) `GET /statuses/objectss`
-  3. [Статусы испытания] (#63-Статусы-испытания-get-statusesexperiments) `GET /statuses/experimentss`
-  4. [Статусы задачи] (#64-Статусы-задачи-get-statusestasks) `GET /statuses/taskss`
+  1. [Статусы тем] (#61-Статусы-тем-get-statusestheme) `GET /statuses/theme`
+  2. [Статусы объектов] (#62-Статусы-объектов-get-statusesobject) `GET /statuses/object`
+  3. [Статусы испытаний] (#63-Статусы-испытаний-get-statusesexperiment) `GET /statuses/experiment`
+  4. [Статусы задач] (#64-Статусы-задач-get-statusestask) `GET /statuses/task`
 
 
 ## 1. Темы
@@ -185,7 +185,7 @@ POST /themes HTTP/1.1
 HTTP/1.1 201 Created
 
 {
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+  "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
 }
 ```
 
@@ -408,7 +408,7 @@ POST /objects HTTP/1.1
 HTTP/1.1 201 Created
 
 {
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+  "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
 }
 ```
 
@@ -591,7 +591,7 @@ POST /experiments HTTP/1.1
 HTTP/1.1 201 Created
 
 {
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+  "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
 }
 ```
 
@@ -690,7 +690,7 @@ POST /tasks HTTP/1.1
 HTTP/1.1 201 Created
 
 {
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
+  "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
 }
 ```
 
@@ -730,26 +730,11 @@ HTTP/1.1 200 OK
 
 ## 5. Места проведения
 
-### 5.1. Получение места `GET /locations/:id`
+### 5.1. Получение мест `GET /locations`
 
 **Request**
 ```http
-GET /locations/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5 HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "name": "Название места"
-}
-```
-
-### 5.2. Поиск места `GET /locations/search/:params`
-
-**Request**
-```http
-GET /locations/search?q=поисковый+запрос HTTP/1.1
+GET /locations HTTP/1.1
 ```
 **Response**
 ```http
@@ -767,65 +752,120 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 5.3. Создание места `POST /locations`
-
-**Request**
-```http
-POST /locations HTTP/1.1
-
-{
-  "name": "Название места"
-}
-```
-**Response**
-```http
-HTTP/1.1 201 Created
-
-{
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
-}
-```
-
-### 5.4. Редактирование места `PUT /locations/:id`
-
-**Request**
-```http
-PUT /locations/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
-
-{
-  "name": "Название места"
-}
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-```
-
-### 5.5. Удаление места `DELETE /locations/:id`
-
-**Request**
-```http
-DELETE /locations/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-```
-
 
 ## 6. Статусы
 
-### 6.1. Поиск статуса `GET /statuses/search/:params`
+### 6.1. Статусы тем `GET /statuses/theme`
 
 **Request**
 ```http
-GET //search?q=поисковый+запрос HTTP/1.1
+GET /statuses/theme HTTP/1.1
 ```
 **Response**
 ```http
 HTTP/1.1 200 OK
 
 {
-  "name": "Название места"
+  "statuses": [
+    {
+      "name": "Этап 'ЭП'"
+    },
+    {
+      "name": "Этап 'ТП'"
+    },
+    {
+      "name": "Разработка РКД"
+    },
+    {
+      "name": "Проведение ПИ"
+    },
+    {
+      "name": "Проведение ГИ"
+    },
+    {
+      "name": "Работы приостановлены"
+    },
+    {
+      "name": "Работы завершены"
+    }
+  ]
+}
+```
+
+### 6.2. Статусы объектов `GET /statuses/object`
+
+**Request**
+```http
+GET /statuses/object HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "statuses": [
+    {
+      "name": "Отработка начата"
+    },
+    {
+      "name": "Отработка завершена"
+    },
+    {
+      "name": "Отработка отменена"
+    }
+  ]
+}
+```
+
+### 6.3. Статусы испытаний `GET /statuses/experiment`
+
+**Request**
+```http
+GET /statuses/experiment HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "statuses": [
+    {
+      "name": "Работа начата"
+    },
+    {
+      "name": "Испытание проведено"
+    },
+    {
+      "name": "Работа завершена"
+    },
+    {
+      "name": "Работа отменена"
+    }
+  ]
+}
+```
+
+### 6.4. Статусы задач `GET /statuses/task`
+
+**Request**
+```http
+GET /statuses/task HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "statuses": [
+    {
+      "name": "Не выполнено"
+    },
+    {
+      "name": "Выполнено"
+    },
+    {
+      "name": "Не заказана"    
+    },
+  ]
 }
 ```
