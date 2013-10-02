@@ -13,7 +13,7 @@
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectsid) `GET /objects/:id`
   2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemesid) `GET /objects/:id/themes/:id`
-  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectsidhistoryid) `GET /objects/:id/history/:id`
+  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectsidhistorythemesid) `GET /objects/:id/history/themes/:id`
   4. [Поиск объекта] (#24-Поиск-объекта-get-objectssearchparams) `GET /objects/search/:params`
   5. [Создание объекта] (#25-Создание-объекта-post-objects) `POST /objects`
   6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
@@ -299,10 +299,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.3. История изменения объекта в теме `GET /objects/:id/history/:id`
+### 2.3. История изменения объекта в теме `GET /objects/:id/history/themes/:id`
 **Request**
 ```http
-GET /objects/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
+GET /objects/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/themes/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
 ```
 **Response**
 ```http
