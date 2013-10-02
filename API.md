@@ -65,7 +65,8 @@ HTTP/1.1 200 OK
       "name": "Название объекта2",
       "status": 1
     }
-  ]
+  ],
+  "isReadonly": true
 }
 ```
 
@@ -247,7 +248,8 @@ HTTP/1.1 200 OK
       "id": "9c8550f3-95a9-418e-a593-b9f5d5ab548d",
       "name": "Название объекта2",
     }
-  ]
+  ],
+  "isReadonly": true
 }
 ```
 
@@ -295,7 +297,8 @@ HTTP/1.1 200 OK
       "name": "Название испытания3",
       "status": 2
     }
-  ]
+  ],
+  "isReadonly": true
 }
 ```
 
@@ -526,7 +529,8 @@ HTTP/1.1 200 OK
   ],
   "status": 0,
   "report": "Акт/Отчет",
-  "conclusion": "Заключение"
+  "conclusion": "Заключение",
+  "isReadonly": true
 }
 ```
 
@@ -664,7 +668,8 @@ HTTP/1.1 200 OK
   "planend": "2013-23-09 18:47",
   "docs": "Документация",
   "notes": "Примечание",
-  "status": 0
+  "status": 0,
+  "isReadonly": true
 }
 ```
 
