@@ -33,7 +33,7 @@
   4. [Удаление задачи] (#44-Удаление-задачи-delete-tasksid) `DELETE /tasks/:id`
 5. [Места проведения и отделы] (#5-Места-проведения-и-отделы)
   1. [Получение мест] (#51-Получение-мест-get-placeslocations) `GET /places/locations`
-  2. [Получение отделов] (#51-Получение-мест-get-placesdepts) `GET /places/depts`
+  2. [Получение отделов] (#52-Получение-мест-get-placesdepts) `GET /places/depts`
 6. [Статусы] (#6-Статусы)
   1. [Статусы тем] (#61-Статусы-тем-get-statusestheme) `GET /statuses/theme`
   2. [Статусы объектов] (#62-Статусы-объектов-get-statusesobject) `GET /statuses/object`
