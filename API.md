@@ -39,6 +39,8 @@
   2. [Статусы объектов] (#62-Статусы-объектов-get-statusesobject) `GET /statuses/object`
   3. [Статусы испытаний] (#63-Статусы-испытаний-get-statusesexperiment) `GET /statuses/experiment`
   4. [Статусы задач] (#64-Статусы-задач-get-statusestask) `GET /statuses/task`
+7. [Информация о пользователе]
+  1. [Получение информации] (#71-Получение-информации-get-userinfo) `GET /userinfo`
 
 
 ## 1. Темы
@@ -916,7 +918,7 @@ GET /statuses/task HTTP/1.1
 HTTP/1.1 200 OK
 
 {
-  "statuses": [
+"statuses": [
     {
       "name": "Не выполнено",
       "type": 0
@@ -954,5 +956,24 @@ HTTP/1.1 200 OK
       "type": 0
     }
   ]
+}
+```
+
+
+## 7. Информация о пользователе
+
+### 7.1. Получение информации `GET /userinfo`
+
+**Request**
+```http
+GET /userinfo HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "name": "Имя пользователя",
+  "role": 0
 }
 ```
