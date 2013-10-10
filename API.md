@@ -39,7 +39,7 @@
   2. [Статусы объектов] (#62-Статусы-объектов-get-statusesobject) `GET /statuses/object`
   3. [Статусы испытаний] (#63-Статусы-испытаний-get-statusesexperiment) `GET /statuses/experiment`
   4. [Статусы задач] (#64-Статусы-задач-get-statusestask) `GET /statuses/task`
-7. [Информация о пользователе]
+7. [Информация о пользователе] (#7-Информация-о-пользователе)
   1. [Получение информации] (#71-Получение-информации-get-userinfo) `GET /userinfo`
 
 
