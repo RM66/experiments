@@ -22,10 +22,11 @@
   9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
 3. [Испытания] (#3-Испытания)
   1. [Получение испытания] (#31-Получение-испытания-get-experimentsid) `GET /experiments/:id`
-  2. [Поиск испытания] (#32-Поиск-испытания-get-experimentssearchparams) `GET /experiments/search/:params`
-  3. [Создание испытания] (#33-Создание-испытания-post-experiments) `POST /experiments`
-  4. [Редактирование испытания] (#34-Редактирование-испытания-put-experimentsid) `PUT /experiments/:id`
-  5. [Удаление испытания] (#35-Удаление-испытания-delete-experimentsid) `DELETE /experiments/:id`
+  2. [История изменения испытания] (#32-История-изменения-испытания-get-experimentsidhistory) `GET /experiments/:id/history`
+  3. [Поиск испытания] (#33-Поиск-испытания-get-experimentssearchparams) `GET /experiments/search/:params`
+  4. [Создание испытания] (#34-Создание-испытания-post-experiments) `POST /experiments`
+  5. [Редактирование испытания] (#35-Редактирование-испытания-put-experimentsid) `PUT /experiments/:id`
+  6. [Удаление испытания] (#36-Удаление-испытания-delete-experimentsid) `DELETE /experiments/:id`
 4. [Задачи] (#4-Задачи)
   1. [Получение задачи] (#41-Получение-задачи-get-tasksid) `GET /tasks/:id`
   2. [Создание задачи] (#42-Создание-задачи-post-tasks) `POST /tasks`
@@ -541,7 +542,61 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 3.2. Поиск испытания `GET /experiments/search/:params`
+### 3.2. История изменения испытания `GET /experiments/:id/history`
+**Request**
+```http
+GET /experiments/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "history": [
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2014-10-24 17:42",
+      "theme": {
+        "name": "Новое название"
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2013-09-23 16:41",
+      "theme": {
+        "status": "Новый статус"
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2012-08-22 15:40",
+      "theme": {
+        "tasks": [
+          {
+            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+            "name": "Новая задача"
+          }
+        ]
+      }
+    },
+    {
+      "author": "Фамилия И.О.",
+      "datetime": "2011-07-21 14:39",
+      "theme": {
+        "tasks": [
+          {
+            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+            "name": "Задача с новым статусом",
+            "status": "Новый статус"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+### 3.3. Поиск испытания `GET /experiments/search/:params`
 
 **Request**
 ```http
@@ -567,7 +622,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 3.3. Создание испытания `POST /experiments`
+### 3.4. Создание испытания `POST /experiments`
 
 **Request**
 ```http
@@ -606,7 +661,7 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 3.4. Редактирование испытания `PUT /experiments/:id`
+### 3.5. Редактирование испытания `PUT /experiments/:id`
 
 **Request**
 ```http
@@ -643,7 +698,7 @@ PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 3.5. Удаление испытания `DELETE /experiments/:id`
+### 3.6. Удаление испытания `DELETE /experiments/:id`
 
 **Request**
 ```http
