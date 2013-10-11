@@ -532,7 +532,12 @@ HTTP/1.1 200 OK
       "temperature": 36.6, 
       "humidity": 234, 
       "pressure": 5367,
-	  "equipment": "Комплектация"
+      "equipment": [
+		"Объект1 (k шт.)",
+		"Объект2 (l шт.)",
+		"Объект3 (m шт.)",
+		"Объект4 (n шт.)"
+	  ]
     }
   ],
   "status": "Статус испытания",
@@ -735,7 +740,12 @@ HTTP/1.1 200 OK
   "temperature": 36.6, 
   "humidity": 234, 
   "pressure": 5367,
-  "equipment": "Комплектация",
+  "equipment": [
+	"Объект1 (k шт.)",
+	"Объект2 (l шт.)",
+	"Объект3 (m шт.)",
+	"Объект4 (n шт.)"
+  ],
   "isReadonly": true
 }
 ```
@@ -758,7 +768,12 @@ POST /tasks HTTP/1.1
   "temperature": 36.6, 
   "humidity": 234, 
   "pressure": 5367,
-  "equipment": "Комплектация"
+  "equipment": [
+	"Объект1 (k шт.)",
+	"Объект2 (l шт.)",
+	"Объект3 (m шт.)",
+	"Объект4 (n шт.)"
+  ]
 }
 ```
 **Response**
@@ -789,7 +804,12 @@ PUT /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
   "temperature": 36.6, 
   "humidity": 234, 
   "pressure": 5367,
-  "equipment": "Комплектация"
+  "equipment": [
+	"Объект1 (k шт.)",
+	"Объект2 (l шт.)",
+	"Объект3 (m шт.)",
+	"Объект4 (n шт.)"
+  ]
 }
 ```
 **Response**
