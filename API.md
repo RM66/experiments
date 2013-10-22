@@ -668,7 +668,7 @@ POST /experiments HTTP/1.1
 	  "id": "eec0dcf8-33a3-452f-80c9-200bdc16bd82"
 	},
 	{
-	  "id": "86956055-6058-426c-b730-7d2c7f963cdc"
+	  "id": "86956055-6058-426c-b730-7d2c7f963cdc",
 	  "objects": [
 	    {
 	      "id": "5e9299cd-fb98-42a6-a31e-43a3945a8be2"
@@ -723,7 +723,7 @@ PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 	  "id": "eec0dcf8-33a3-452f-80c9-200bdc16bd82"
 	},
 	{
-	  "id": "86956055-6058-426c-b730-7d2c7f963cdc"
+	  "id": "86956055-6058-426c-b730-7d2c7f963cdc",
 	  "objects": [
 	    {
 	      "id": "5e9299cd-fb98-42a6-a31e-43a3945a8be2"
