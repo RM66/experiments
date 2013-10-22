@@ -561,7 +561,10 @@ HTTP/1.1 200 OK
     }
   ],
   "status": "Статус испытания",
-  "report": "Акт/Отчет",
+  "report": [
+    "отчет.doc",
+    "Акт №1"
+  ],
   "conclusion": "Заключение",
   "isReadonly": true
 }
@@ -746,7 +749,10 @@ PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
     }
   ],
   "status": "Статус испытания",
-  "report": "Акт/Отчет",
+  "report": [
+    "отчет.doc",
+    "Акт №1"
+  ],
   "conclusion": "Заключение"
 }
 ```
