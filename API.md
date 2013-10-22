@@ -35,13 +35,13 @@
 5. [Места проведения и отделы] (#5-Места-проведения-и-отделы)
   1. [Получение мест] (#51-Получение-мест-get-placeslocations) `GET /places/locations`
   2. [Получение отделов] (#52-Получение-отделов-get-placesdepts) `GET /places/depts`
-6. [Статусы] (#6-Статусы)
-  1. [Статусы тем] (#61-Статусы-тем-get-statusestheme) `GET /statuses/theme`
-  2. [Статусы объектов] (#62-Статусы-объектов-get-statusesobject) `GET /statuses/object`
-  3. [Статусы испытаний] (#63-Статусы-испытаний-get-statusesexperiment) `GET /statuses/experiment`
-  4. [Статусы задач] (#64-Статусы-задач-get-statusestask) `GET /statuses/task`
-7. [Информация о пользователе] (#7-Информация-о-пользователе)
-  1. [Получение информации] (#71-Получение-информации-get-userinfo) `GET /userinfo`
+6. [Информация о пользователе] (#6-Информация-о-пользователе)
+  1. [Получение информации] (#61-Получение-информации-get-userinfo) `GET /userinfo`
+7. [Статусы] (#7-Статусы)
+  1. [Статусы тем] (#71-Статусы-тем)
+  2. [Статусы объектов] (#72-Статусы-объектов)
+  3. [Статусы испытаний] (#73-Статусы-испытаний)
+  4. [Статусы задач] (#74-Статусы-задач)
 
 
 ## 1. Темы
@@ -928,18 +928,30 @@ HTTP/1.1 200 OK
 ```
 
 
-## 6. Статусы
+## 6. Информация о пользователе
 
-### 6.1. Статусы тем `GET /statuses/theme`
+### 6.1. Получение информации `GET /userinfo`
 
 **Request**
 ```http
-GET /statuses/theme HTTP/1.1
+GET /userinfo HTTP/1.1
 ```
 **Response**
 ```http
 HTTP/1.1 200 OK
 
+{
+  "name": "Имя пользователя",
+  "role": 0
+}
+```
+
+
+## 7. Статусы
+
+### 7.1. Статусы тем
+
+```
 {
   "statuses": [
     {
@@ -974,16 +986,9 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 6.2. Статусы объектов `GET /statuses/object`
+### 7.2. Статусы объектов
 
-**Request**
-```http
-GET /statuses/object HTTP/1.1
 ```
-**Response**
-```http
-HTTP/1.1 200 OK
-
 {
   "statuses": [
     {
@@ -1002,16 +1007,9 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 6.3. Статусы испытаний `GET /statuses/experiment`
+### 7.3. Статусы испытаний
 
-**Request**
-```http
-GET /statuses/experiment HTTP/1.1
 ```
-**Response**
-```http
-HTTP/1.1 200 OK
-
 {
   "statuses": [
     {
@@ -1034,18 +1032,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 6.4. Статусы задач `GET /statuses/task`
+### 7.4. Статусы задач
 
-**Request**
-```http
-GET /statuses/task HTTP/1.1
 ```
-**Response**
-```http
-HTTP/1.1 200 OK
-
 {
-"statuses": [
+  "statuses": [
     {
       "name": "Не выполнено",
       "type": 0
@@ -1083,24 +1074,5 @@ HTTP/1.1 200 OK
       "type": 0
     }
   ]
-}
-```
-
-
-## 7. Информация о пользователе
-
-### 7.1. Получение информации `GET /userinfo`
-
-**Request**
-```http
-GET /userinfo HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "name": "Имя пользователя",
-  "role": 0
 }
 ```
