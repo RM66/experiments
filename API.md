@@ -555,7 +555,7 @@ HTTP/1.1 200 OK
       ],
       "notes": "Примечание",
       "status": "Статус задачи2",
-      "additionalParams": [
+      "additionalParams": {
         "extConditions": [
        	  {
        	    "name": "Температура",
@@ -576,7 +576,7 @@ HTTP/1.1 200 OK
 	  "Объект3 (m шт.)",
 	  "Объект4 (n шт.)"
 	]
-      ]
+      }
     }
   ],
   "status": "Статус испытания",
@@ -816,7 +816,7 @@ HTTP/1.1 200 OK
   ],
   "notes": "Примечание",
   "status": "Статус задачи",  
-  "additionalParams": [
+  "additionalParams": {
     "extConditions": [
       {
         "name": "Температура",
@@ -837,7 +837,7 @@ HTTP/1.1 200 OK
       "Объект3 (m шт.)",
       "Объект4 (n шт.)"
     ]
-  ],
+  },
   "isReadonly": true
 }
 ```
@@ -859,7 +859,7 @@ POST /tasks HTTP/1.1
   ],
   "notes": "Примечание",
   "status": "Статус задачи",  
-  "additionalParams": [
+  "additionalParams": {
     "extConditions": [
       {
         "name": "Температура",
@@ -880,7 +880,7 @@ POST /tasks HTTP/1.1
       "Объект3 (m шт.)",
       "Объект4 (n шт.)"
     ]
-  ]
+  }
 }
 ```
 **Response**
@@ -910,7 +910,7 @@ PUT /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
   ],
   "notes": "Примечание",
   "status": "Статус задачи",  
-  "additionalParams": [
+  "additionalParams": {
     "extConditions": [
       {
         "name": "Температура",
@@ -931,7 +931,7 @@ PUT /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
       "Объект3 (m шт.)",
       "Объект4 (n шт.)"
     ]
-  ]
+  }
 }
 ```
 **Response**
