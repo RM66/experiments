@@ -5,43 +5,41 @@
 
 1. [Темы] (#1-Темы)
   1. [Получение темы] (#11-Получение-темы-get-themesid) `GET /themes/:id`
-  2. [История изменения темы] (#12-История-изменения-темы-get-themesidhistory) `GET /themes/:id/history`
-  3. [Поиск темы] (#13-Поиск-темы-get-themessearchparams) `GET /themes/search/:params`
-  4. [Создание темы] (#14-Создание-темы-post-themes) `POST /themes`
-  5. [Редактирование темы] (#15-Редактирование-темы-put-themesid) `PUT /themes/:id`
-  6. [Удаление темы] (#16-Удаление-темы-delete-themesid) `DELETE /themes/:id`
+  2. [Создание темы] (#12-Создание-темы-post-themes) `POST /themes`
+  3. [Редактирование темы] (#13-Редактирование-темы-put-themesid) `PUT /themes/:id`
+  4. [Удаление темы] (#14-Удаление-темы-delete-themesid) `DELETE /themes/:id`
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectsid) `GET /objects/:id`
   2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemesid) `GET /objects/:id/themes/:id`
-  3. [История изменения объекта в теме] (#23-История-изменения-объекта-в-теме-get-objectsidhistorythemesid) `GET /objects/:id/history/themes/:id`
-  4. [Поиск объекта] (#24-Поиск-объекта-get-objectssearchparams) `GET /objects/search/:params`
-  5. [Создание объекта] (#25-Создание-объекта-post-objects) `POST /objects`
-  6. [Редактирование объекта] (#26-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
-  7. [Редактирование объекта в теме] (#27-Редактирование-объекта-в-теме-put-objectsidthemesid) `PUT /objects/:id/themes/:id`
-  8. [Удаление объекта] (#28-Удаление-объекта-delete-objectsid) `DELETE /objects/:id`
-  9. [Удаление объекта из темы] (#29-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
+  3. [Создание объекта] (#23-Создание-объекта-post-objects) `POST /objects`
+  4. [Редактирование объекта] (#24-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
+  5. [Редактирование объекта в теме] (#25-Редактирование-объекта-в-теме-put-objectsidthemesid) `PUT /objects/:id/themes/:id`
+  6. [Удаление объекта] (#26-Удаление-объекта-delete-objectsid) `DELETE /objects/:id`
+  7. [Удаление объекта из темы] (#27-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
 3. [Испытания] (#3-Испытания)
   1. [Получение испытания] (#31-Получение-испытания-get-experimentsid) `GET /experiments/:id`
-  2. [История изменения испытания] (#32-История-изменения-испытания-get-experimentsidhistory) `GET /experiments/:id/history`
-  3. [Поиск испытания] (#33-Поиск-испытания-get-experimentssearchparams) `GET /experiments/search/:params`
-  4. [Создание испытания] (#34-Создание-испытания-post-experiments) `POST /experiments`
-  5. [Редактирование испытания] (#35-Редактирование-испытания-put-experimentsid) `PUT /experiments/:id`
-  6. [Удаление испытания] (#36-Удаление-испытания-delete-experimentsid) `DELETE /experiments/:id`
+  2. [Создание испытания] (#32-Создание-испытания-post-experiments) `POST /experiments`
+  3. [Редактирование испытания] (#33-Редактирование-испытания-put-experimentsid) `PUT /experiments/:id`
+  4. [Удаление испытания] (#34-Удаление-испытания-delete-experimentsid) `DELETE /experiments/:id`
 4. [Задачи] (#4-Задачи)
   1. [Получение задачи] (#41-Получение-задачи-get-tasksid) `GET /tasks/:id`
   2. [Создание задачи] (#42-Создание-задачи-post-tasks) `POST /tasks`
   3. [Редактирование задачи] (#43-Редактирование-задачи-put-tasksid) `PUT /tasks/:id`
   4. [Удаление задачи] (#44-Удаление-задачи-delete-tasksid) `DELETE /tasks/:id`
-5. [Места проведения и отделы] (#5-Места-проведения-и-отделы)
-  1. [Получение мест] (#51-Получение-мест-get-placeslocations) `GET /places/locations`
-  2. [Получение отделов] (#52-Получение-отделов-get-placesdepts) `GET /places/depts`
-6. [Информация о пользователе] (#6-Информация-о-пользователе)
-  1. [Получение информации] (#61-Получение-информации-get-userinfo) `GET /userinfo`
-7. [Статусы] (#7-Статусы)
-  1. [Статусы тем] (#71-Статусы-тем)
-  2. [Статусы объектов] (#72-Статусы-объектов)
-  3. [Статусы испытаний] (#73-Статусы-испытаний)
-  4. [Статусы задач] (#74-Статусы-задач)
+5. [История] (#5-История)
+  1. [Получение истории] (#51-Получение-истории-get-historyid) `GET /history/:id`
+6. [Поиск] (#6-Поиск)
+  1. [Получение результатов] (#61-Получение-результатов-get-searchparams) `GET /search/:params`
+7. [Места проведения и отделы] (#7-Места-проведения-и-отделы)
+  1. [Получение мест] (#71-Получение-мест-get-placeslocations) `GET /places/locations`
+  2. [Получение отделов] (#72-Получение-отделов-get-placesdepts) `GET /places/depts`
+8. [Информация о пользователе] (#8-Информация-о-пользователе)
+  1. [Получение информации] (#81-Получение-информации-get-userinfo) `GET /userinfo`
+9. [Статусы] (#9-Статусы)
+  1. [Статусы тем] (#91-Статусы-тем)
+  2. [Статусы объектов] (#92-Статусы-объектов)
+  3. [Статусы испытаний] (#93-Статусы-испытаний)
+  4. [Статусы задач] (#94-Статусы-задач)
 
 
 ## 1. Темы
@@ -74,99 +72,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 1.2. История изменения темы `GET /themes/:id/history`
-**Request**
-```http
-GET /themes/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "history": [
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2014-10-24 17:42",
-      "theme": {
-        "name": "Новое название"
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2013-09-23 16:41",
-      "theme": {
-        "status": "Новый статус"
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2012-08-22 15:40",
-      "theme": {
-        "objects": [
-          {
-            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-            "name": "Новый объект"
-          }
-        ]
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2011-07-21 14:39",
-      "theme": {
-        "objects": [
-          {
-            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-            "name": "Удаленный объект",
-            "isdeleted": true
-          }
-        ]
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2010-06-20 13:38",
-      "theme": {
-        "objects": [
-          {
-            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-            "name": "Объект с новым статусом",
-            "status": "Новый статус"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-### 1.3. Поиск темы `GET /themes/search/:params`
-**Request**
-```http
-GET /themes/search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "themes": [
-    {
-      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название темы1",
-      "status": "Статус темы1"
-    },
-    {
-      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
-      "name": "Название темы2",
-      "status": "Статус темы2"
-    }
-  ]
-}
-```
-
-### 1.4. Создание темы `POST /themes`
+### 1.2. Создание темы `POST /themes`
 
 **Request**
 ```http
@@ -194,7 +100,7 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 1.5. Редактирование темы `PUT /themes/:id`
+### 1.3. Редактирование темы `PUT /themes/:id`
 
 **Request**
 ```http
@@ -218,7 +124,7 @@ PUT /themes/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 1.6. Удаление темы `DELETE /themes/:id`
+### 1.4. Удаление темы `DELETE /themes/:id`
 
 **Request**
 ```http
@@ -306,93 +212,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.3. История изменения объекта в теме `GET /objects/:id/history/themes/:id`
-**Request**
-```http
-GET /objects/567eea32-54d6-49a1-8c33-dcc0dd0a3d8a/history/themes/bcd25224-b57f-44aa-9689-0f71d07fa2ee HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "history": [
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2014-10-24 17:42",
-      "experiments": [
-        {
-          "id": "f774eea5-11f4-46c1-ad4c-05e0cdd3839e"
-          "name": "Новый эксперимент"
-        }
-      ]
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2013-09-23 16:41",
-      "status": "Новый статус"
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2012-08-22 15:40",
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Новый объект"
-        }
-      ]
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2011-07-21 14:39",
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Удаленный объект",
-          "isdeleted": true
-        }
-      ]
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2010-06-20 13:38",
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Объект с новым статусом",
-          "status": "Новый статус"
-        }
-      ]
-    }
-  ]
-}
-```
-
-### 2.4. Поиск объекта `GET /objects/search/:params`
-
-**Request**
-```http
-GET /objects/search?q=поисковый+запрос HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "objects": [
-    {
-      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название объекта1"
-    },
-    {
-      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
-      "name": "Название объекта2"
-    }
-  ]
-}
-```
-
-### 2.5. Создание объекта `POST /objects`
+### 2.3. Создание объекта `POST /objects`
 
 **Request**
 ```http
@@ -419,7 +239,7 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 2.6. Редактирование объекта `PUT /objects/:id`
+### 2.4. Редактирование объекта `PUT /objects/:id`
 
 **Request**
 ```http
@@ -434,7 +254,7 @@ PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 2.7. Редактирование объекта в теме `PUT /objects/:id/themes/:id`
+### 2.5. Редактирование объекта в теме `PUT /objects/:id/themes/:id`
 
 **Request**
 ```http
@@ -457,7 +277,7 @@ PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8/themes/0a68f229-6506-4bc4-96e4
 HTTP/1.1 200 OK
 ```
 
-### 2.8. Удаление объекта `DELETE /objects/:id`
+### 2.6. Удаление объекта `DELETE /objects/:id`
 
 **Request**
 ```http
@@ -468,7 +288,7 @@ DELETE /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 2.9. Удаление объекта из темы `DELETE /objects/:id/themes/:id`
+### 2.7. Удаление объекта из темы `DELETE /objects/:id/themes/:id`
 
 **Request**
 ```http
@@ -569,13 +389,13 @@ HTTP/1.1 200 OK
        	    "name": "Давление",
        	    "value": 5367
        	  }
-	],
-	"equipment": [
-	  "Объект1 (k шт.)",
-	  "Объект2 (l шт.)",
-	  "Объект3 (m шт.)",
-	  "Объект4 (n шт.)"
-	]
+        ],
+        "equipment": [
+          "Объект1 (k шт.)",
+          "Объект2 (l шт.)",
+          "Объект3 (m шт.)",
+          "Объект4 (n шт.)"
+        ]
       }
     }
   ],
@@ -589,87 +409,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 3.2. История изменения испытания `GET /experiments/:id/history`
-**Request**
-```http
-GET /experiments/50fd1615-4bf3-4f37-8fb3-fa0abfd64fa5/history HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "history": [
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2014-10-24 17:42",
-      "theme": {
-        "name": "Новое название"
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2013-09-23 16:41",
-      "theme": {
-        "status": "Новый статус"
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2012-08-22 15:40",
-      "theme": {
-        "tasks": [
-          {
-            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-            "name": "Новая задача"
-          }
-        ]
-      }
-    },
-    {
-      "author": "Фамилия И.О.",
-      "datetime": "2011-07-21 14:39",
-      "theme": {
-        "tasks": [
-          {
-            "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-            "name": "Задача с новым статусом",
-            "status": "Новый статус"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-### 3.3. Поиск испытания `GET /experiments/search/:params`
-
-**Request**
-```http
-GET /experiments/search?q=поисковый+запрос HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-
-{
-  "experiments": [
-    {
-      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
-      "name": "Название испытания1",
-      "status": "Статус испытания1"
-    },
-    {
-      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
-      "name": "Название испытания2",
-      "status": "Статус испытания2"
-    }
-  ]
-}
-```
-
-### 3.4. Создание испытания `POST /experiments`
+### 3.2. Создание испытания `POST /experiments`
 
 **Request**
 ```http
@@ -724,7 +464,7 @@ HTTP/1.1 201 Created
 }
 ```
 
-### 3.5. Редактирование испытания `PUT /experiments/:id`
+### 3.3. Редактирование испытания `PUT /experiments/:id`
 
 **Request**
 ```http
@@ -780,7 +520,7 @@ PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 3.6. Удаление испытания `DELETE /experiments/:id`
+### 3.4. Удаление испытания `DELETE /experiments/:id`
 
 **Request**
 ```http
@@ -951,9 +691,141 @@ HTTP/1.1 200 OK
 ```
 
 
-## 5. Места проведения и отделы
+## 5. История
 
-### 5.1. Получение мест `GET /places/locations`
+### 5.1. Получение истории `GET /history/:id`
+
+**Request**
+```http
+GET /history/772de9b9-9f39-4ae4-bda5-7138f44b6e84 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+[
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "name": "Новое название"
+    }
+  },
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "status": "Новый статус"
+    }
+  },
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Новый объект"
+        }
+      ]
+    }
+  },
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Удаленный объект",
+          "isDeleted": true
+        }
+      ]
+    }
+  },
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "objects": [
+        {
+          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+          "name": "Объект с новым статусом",
+          "status": "Новый статус"
+        }
+      ]
+    }
+  },
+  {
+    "author": "Фамилия И.О.",
+    "datetime": "2014-10-24 17:42",
+    "changed": {
+      "experiments": [
+        {
+          "id":  "85b42f27-0ee4-4131-a9ec-cd0f4e73fd0b",
+          "name": "Новый эксперимент"
+        }
+      ]
+    }
+  }
+]
+```
+
+
+## 6. Поиск
+
+### 6.1. Получение результатов `GET /search/:params`
+
+**Request**
+```http
+GET /search?q=поисковый+запрос&firstdate=01.01.2001&lastdate=12.12.2012 HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+{
+  "themes": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название темы1",
+      "status": "Статус темы1"
+    },
+    {
+      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+      "name": "Название темы2",
+      "status": "Статус темы2"
+    }
+  ],
+  "objects": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название объекта1"
+    },
+    {
+      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+      "name": "Название объекта2"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+      "name": "Название испытания1",
+      "status": "Статус испытания1"
+    },
+    {
+      "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+      "name": "Название испытания2",
+      "status": "Статус испытания2"
+    }
+  ]
+}
+```
+
+
+## 7. Места проведения и отделы
+
+### 7.1. Получение мест `GET /places/locations`
 
 **Request**
 ```http
@@ -975,7 +847,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 5.2. Получение отделов `GET /places/depts`
+### 7.2. Получение отделов `GET /places/depts`
 
 **Request**
 ```http
@@ -998,9 +870,9 @@ HTTP/1.1 200 OK
 ```
 
 
-## 6. Информация о пользователе
+## 8. Информация о пользователе
 
-### 6.1. Получение информации `GET /userinfo`
+### 8.1. Получение информации `GET /userinfo`
 
 **Request**
 ```http
@@ -1017,9 +889,9 @@ HTTP/1.1 200 OK
 ```
 
 
-## 7. Статусы
+## 9. Статусы
 
-### 7.1. Статусы тем
+### 9.1. Статусы тем
 
 ```
 {
@@ -1056,7 +928,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 7.2. Статусы объектов
+### 9.2. Статусы объектов
 
 ```
 {
@@ -1077,7 +949,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 7.3. Статусы испытаний
+### 9.3. Статусы испытаний
 
 ```
 {
@@ -1102,7 +974,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 7.4. Статусы задач
+### 9.4. Статусы задач
 
 ```
 {
