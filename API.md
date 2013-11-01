@@ -706,67 +706,70 @@ HTTP/1.1 200 OK
 [
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Nov 1 2013 17:45:00 GMT+0600",
     "changed": {
       "name": "Новое название"
     }
   },
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Oct 30 2013 15:56:00 GMT+0600",
     "changed": {
+	  "name": "Новое название",
       "status": "Новый статус"
     }
   },
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Oct 22 2013 15:54:00 GMT+0600",
     "changed": {
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Новый объект"
-        }
-      ]
+      "object": {
+        "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+        "name": "Наименование нового объекта"
+      }
     }
   },
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Oct 01 2013 12:56:00 GMT+0600",
     "changed": {
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Удаленный объект",
-          "isDeleted": true
-        }
-      ]
+      "object": {
+        "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
+        "name": "Наименование удаленного объекта",
+        "isDeleted": true
+      }
     }
   },
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Sep 25 2013 15:09:00 GMT+0600",
     "changed": {
-      "objects": [
-        {
-          "id": "c6dda2d9-dc23-44fc-84b4-24b3c57470f1",
-          "name": "Объект с новым статусом",
-          "status": "Новый статус"
-        }
-      ]
+      "task": {
+        "id":  "85b42f27-0ee4-4131-a9ec-cd0f4e73fd0b",
+        "name": "Название новой задачи"
+      }
     }
   },
   {
     "author": "Фамилия И.О.",
-    "datetime": "2014-10-24 17:42",
+    "datetime": "Aug 24 2013 18:32:00 GMT+0600",
     "changed": {
-      "experiments": [
-        {
-          "id":  "85b42f27-0ee4-4131-a9ec-cd0f4e73fd0b",
-          "name": "Новый эксперимент"
-        }
-      ]
+      "task": {
+        "id":  "85b42f27-0ee4-4131-a9ec-cd0f4e73fd0b",
+        "name": "Задача с новым статусом",
+		"status": "Новый статус"
+      }
     }
+  },
+  {
+    "author": "Фамилия И.О.",
+	"datetime": "Aug 23 2013 18:32:00 GMT+0600",
+	"changed": {
+	  "experiment": {
+		"id": "65a48c27-1ee8-3451-a9ec-cd0f4e45416b",
+		"name": "Название нового эксперимента"
+      }
+	}
   }
 ]
 ```
