@@ -11,11 +11,9 @@
 2. [Объекты] (#2-Объекты)
   1. [Получение объекта] (#21-Получение-объекта-get-objectsid) `GET /objects/:id`
   2. [Получение объекта в контексте темы] (#22-Получение-объекта-в-контексте-темы-get-objectsidthemesid) `GET /objects/:id/themes/:id`
-  3. [Создание объекта] (#23-Создание-объекта-post-objects) `POST /objects`
-  4. [Редактирование объекта] (#24-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
-  5. [Редактирование объекта в теме] (#25-Редактирование-объекта-в-теме-put-objectsidthemesid) `PUT /objects/:id/themes/:id`
-  6. [Удаление объекта] (#26-Удаление-объекта-delete-objectsid) `DELETE /objects/:id`
-  7. [Удаление объекта из темы] (#27-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
+  3. [Редактирование объекта] (#23-Редактирование-объекта-put-objectsid) `PUT /objects/:id`
+  4. [Редактирование объекта в теме] (#24-Редактирование-объекта-в-теме-put-objectsidthemesid) `PUT /objects/:id/themes/:id`
+  5. [Удаление объекта из темы] (#25-Удаление-объекта-из-темы-delete-objectsidthemesid) `DELETE /objects/:id/themes/:id`
 3. [Испытания] (#3-Испытания)
   1. [Получение испытания] (#31-Получение-испытания-get-experimentsid) `GET /experiments/:id`
   2. [Создание испытания] (#32-Создание-испытания-post-experiments) `POST /experiments`
@@ -236,34 +234,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### 2.3. Создание объекта `POST /objects`
-
-**Request**
-```http
-POST /objects HTTP/1.1
-
-{
-  "name": "Название объекта",
-  "objects": [
-    {
-      "id": "55f8b311-1f06-496e-abb8-a83dc8e72556"
-    },
-    {
-      "id": "4f5c6f5a-ff97-411e-8bd3-09770101f123"
-    }
-  ]
-}
-```
-**Response**
-```http
-HTTP/1.1 201 Created
-
-{
-  "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
-}
-```
-
-### 2.4. Редактирование объекта `PUT /objects/:id`
+### 2.3. Редактирование объекта `PUT /objects/:id`
 
 **Request**
 ```http
@@ -278,7 +249,7 @@ PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 HTTP/1.1 200 OK
 ```
 
-### 2.5. Редактирование объекта в теме `PUT /objects/:id/themes/:id`
+### 2.4. Редактирование объекта в теме `PUT /objects/:id/themes/:id`
 
 **Request**
 ```http
@@ -301,18 +272,7 @@ PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8/themes/0a68f229-6506-4bc4-96e4
 HTTP/1.1 200 OK
 ```
 
-### 2.6. Удаление объекта `DELETE /objects/:id`
-
-**Request**
-```http
-DELETE /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
-```
-**Response**
-```http
-HTTP/1.1 200 OK
-```
-
-### 2.7. Удаление объекта из темы `DELETE /objects/:id/themes/:id`
+### 2.5. Удаление объекта из темы `DELETE /objects/:id/themes/:id`
 
 **Request**
 ```http
@@ -995,12 +955,9 @@ GET /places/locations HTTP/1.1
 HTTP/1.1 200 OK
 
 [
-  {
-    "name": "Название места1"
-  },
-  {
-    "name": "Название места2"
-  }
+  "Название места1",
+  "Название места2",
+  "Название места3"
 ]
 ```
 
@@ -1015,12 +972,9 @@ GET /places/depts HTTP/1.1
 HTTP/1.1 200 OK
 
 [
-  {
-    "name": "Название отдела1"
-  },
-  {
-    "name": "Название отдела2"
-  }
+  "Название отдела1",
+  "Название отдела2",
+  "Название отдела3"
 ]
 ```
 
@@ -1053,18 +1007,10 @@ HTTP/1.1 200 OK
 POST /reports HTTP/1.1
 
 [
-  {
-    "id": "9e015079-d11d-4bf2-bed7-53a562f86caa"
-  },
-  {
-    "id": "e26ff474-71e9-46c7-b518-b08f069d309f"
-  },
-  {
-    "id": "08f68cfd-ead0-43b6-ba07-e77bbd3c6429"
-  },
-  {
-    "id": "ea1dbf21-fa5e-46ed-b805-4aca78d49b08"
-  }
+  "9e015079-d11d-4bf2-bed7-53a562f86caa",
+  "e26ff474-71e9-46c7-b518-b08f069d309f",
+  "08f68cfd-ead0-43b6-ba07-e77bbd3c6429",
+  "ea1dbf21-fa5e-46ed-b805-4aca78d49b08"
 ]
 ```
 **Response**
