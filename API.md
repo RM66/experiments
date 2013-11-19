@@ -30,7 +30,9 @@
 6. [Поиск] (#6-Поиск)
   1. [Получение результатов] (#61-Получение-результатов-get-searchparams) `GET /search/:params`
   2. [Получение всех тем] (#62-Получение-всех-тем-get-searchthemes) `GET /search/themes`
-  3. [Поиск по объектам] (#63-Поиск-по-объектам-get-searchobjectsparams) `GET /search/objects/:params`
+  3. [Поиск по изделиям] (#63-Поиск-по-изделиям-get-searchproductsparams) `GET /search/products/:params`
+  4. [Поиск по составным частям] (#64-Поиск-по-составным-частям-get-searchcomponentsparams) `GET /search/components/:params`
+  5. [Поиск по узлам] (#65-Поиск-по-узлам-get-searchunitsparams) `GET /search/units/:params`
 7. [Места проведения и отделы] (#7-Места-проведения-и-отделы)
   1. [Получение мест] (#71-Получение-мест-get-placeslocations) `GET /places/locations`
   2. [Получение отделов] (#72-Получение-отделов-get-placesdepts) `GET /places/depts`
@@ -919,11 +921,55 @@ HTTP/1.1 200 OK
 ]
 ```
 
-### 6.3. Поиск по объектам `GET /search/objects/:params`
+### 6.3. Поиск по изделиям `GET /search/products/:params`
 
 **Request**
 ```http
-GET /search/objects?q=поисковый+запрос HTTP/1.1
+GET /search/products?q=поисковый+запрос HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+[
+  {
+    "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+    "name": "Название объекта1"
+  },
+  {
+    "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+    "name": "Название объекта2"
+  }
+]
+```
+
+### 6.4. Поиск по составным частям `GET /search/components/:params`
+
+**Request**
+```http
+GET /search/components?q=поисковый+запрос HTTP/1.1
+```
+**Response**
+```http
+HTTP/1.1 200 OK
+
+[
+  {
+    "id": "a8d7322b-81e3-4e98-afc7-f71f45057a37",
+    "name": "Название объекта1"
+  },
+  {
+    "id": "73580df4-ef64-410b-a224-f4f18389aff7",
+    "name": "Название объекта2"
+  }
+]
+```
+
+### 6.5. Поиск по узлам `GET /search/units/:params`
+
+**Request**
+```http
+GET /search/units?q=поисковый+запрос HTTP/1.1
 ```
 **Response**
 ```http
