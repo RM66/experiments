@@ -438,7 +438,8 @@ POST /experiments HTTP/1.1
       "id": "480f84c8-c378-4cf5-a4e3-5cc9c5ef15d4"
     }
   ],
-  "status": "Статус испытания"
+  "status": "Статус испытания",
+  "filesToUpload": [] // файлы для загрузки
 }
 ```
 **Response**
@@ -498,7 +499,8 @@ PUT /experiments/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
     "отчет.doc",
     "Акт №1"
   ],
-  "conclusion": "Заключение"
+  "conclusion": "Заключение",
+  "filesToUpload": [] // файлы для загрузки
 }
 ```
 **Response**
@@ -606,7 +608,8 @@ POST /tasks HTTP/1.1
       "Объект3 (m шт.)",
       "Объект4 (n шт.)"
     ]
-  }
+  },
+  "filesToUpload": [] // файлы для загрузки
 }
 ```
 **Response**
@@ -657,7 +660,8 @@ PUT /tasks/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
       "Объект3 (m шт.)",
       "Объект4 (n шт.)"
     ]
-  }
+  },
+  "filesToUpload": [] // файлы для загрузки
 }
 ```
 **Response**
