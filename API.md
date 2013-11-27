@@ -60,12 +60,14 @@ HTTP/1.1 200 OK
     {
       "id": "817139c0-dfdc-4928-a375-7cd5a18d1f3c",
       "name": "Изделие1",
-      "status": "Статус изделия1"
+      "status": "Статус изделия1",
+      "type": 0
     },
     {
       "id": "cbec02ca-999a-4645-830e-8dee5dbb6054",
       "name": "Изделие2",
-      "status": "Статус изделия2"
+      "status": "Статус изделия2",
+      "type": 0
     }
   ],
   "isReadonly": true
@@ -250,7 +252,8 @@ HTTP/1.1 200 OK
 PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8 HTTP/1.1
 
 {
-  "name": "Название объекта"
+  "name": "Название объекта",
+  "type": 0
 }
 ```
 **Response**
@@ -267,7 +270,7 @@ PUT /objects/d4ccab6c-b004-4506-9793-f22a7728a1d8/themes/0a68f229-6506-4bc4-96e4
 {
   "name": "Название объекта",
   "status": "Статус объекта",
-  "experiments": [
+  "objects": [
     {
       "id": "c0090788-7d44-4d85-9b44-aa5105e432de"
     },
