@@ -941,6 +941,8 @@ POST /reports HTTP/1.1
 **Response**
 ```http
 HTTP/1.1 201 Created
+
+"http://127.0.0.1/reports/894185c5-709f-450c-9789-fb0470b6a2eb.xls"
 ```
 
 
