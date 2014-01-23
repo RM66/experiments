@@ -954,15 +954,7 @@ POST /reports HTTP/1.1
                 },
                 {
                   "id": "345727fa-3ddc-41e3-a1f6-2276da5ba03b",
-                  "type": 2,
-                  "experiments": [
-                    {
-                      "id": "87acfa23-25e1-4936-8de5-9c700ce81cfe"
-                    },
-                    {
-                      "id": "abf511e3-30fb-4d95-bd01-a81216d8b09b"
-                    }
-                  ]
+                  "type": 2
                 }
               ]
             }
@@ -970,15 +962,7 @@ POST /reports HTTP/1.1
         },
         {
           "id": "8a0d92c9-4d3b-46ff-b04c-5f68f462c479",
-          "type": 0,
-          "experiments": [
-            {
-              "id": "6088d670-3811-4e1a-80ab-22ac68f31e6f"
-            },
-            {
-              "id": "126fa3ec-d450-40c2-ab7d-1c9559c13066"
-            }
-          ]
+          "type": 0
         }
       ]
     },
