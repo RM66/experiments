@@ -133,7 +133,7 @@ HTTP/1.1 200 OK
 
 **Request**
 ```http
-PUT /themes/01c7c18c-2196-4284-b3a2-527f1df3d8c2 HTTP/1.1
+DELETE /themes/01c7c18c-2196-4284-b3a2-527f1df3d8c2 HTTP/1.1
 ```
 **Response**
 ```http
